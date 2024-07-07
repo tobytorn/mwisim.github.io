@@ -7,15 +7,19 @@ class Zone {
 
         let gameZone = actionDetailMap[this.hrid];
         this.monsterSpawnInfo = gameZone.combatZoneInfo.fightInfo;
-        this.encountersKilled = 0;
         this.monsterSpawnInfo.battlesPerBoss = 10;
         this.buffs = gameZone.buffs;
+        this.resetEncounters();
+    }
+
+    resetEncounters() {
+        this.encountersKilled = 1;
     }
 
     getRandomEncounter() {
 
         if (this.monsterSpawnInfo.bossSpawns && this.encountersKilled == this.monsterSpawnInfo.battlesPerBoss) {
-            this.encountersKilled = 1;
+            this.resetEncounters();
             return this.monsterSpawnInfo.bossSpawns.map((monster) => new Monster(monster.combatMonsterHrid, monster.eliteTier));
         }
 

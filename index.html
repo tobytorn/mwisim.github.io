@@ -556,6 +556,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row mb-2">
+                            <label for="inputSimulationBattlesPerAction" class="col-md-3 col-form-label">Battles/action</label>
+                            <div class="col-md">
+                                <div class="input-group">
+                                    <input type="number" id="inputSimulationBattlesPerAction" class="form-control"
+                                        min="1" max="10000" placeholder="unlimited" />
+                                </div>
+                            </div>
+                        </div>
                         <div class="row mb-2 pt-3">
                             <div class="col-md-auto">
                                 <button id="buttonStartSimulation" class="btn btn-primary" type="button">
@@ -1490,6 +1499,12 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 mb-4">
+                                <h6>July 7th, 2024</h6>
+                                <ul>
+                                    <li>Added battles/action option</li>
+                                </ul>
+                            </div>
+                            <div class="col-12 mb-4">
                                 <h6>June 26th, 2024</h6>
                                 <ul>
                                     <li>Mayhem now gives miss XP if it misses the last target</li>
@@ -2007,8 +2022,9 @@
 </body>
 <footer>
     <div style="text-align: center;">
-        <p>Credit to KuganDev and AmVoidGuy for the original versions<br>
-            <a href="https://mwisim.github.io/test/">Test Server Version</a>
+        <p>This is a forked version of the <a href="https://mwisim.github.io/">MWI Combat Simulator</a> (at
+            <a href="https://github.com/MWISim/mwisim.github.io/tree/14cee9a6eefda215acf6700ac55d4747f1181013">
+                this version</a>)
         </p>
     </div>
 </footer>
